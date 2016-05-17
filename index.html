@@ -246,12 +246,12 @@
                                 
                                 
                                 .style("top", (d3.event.pageY + 16) + "px")
-                                .style("left", (d3.event.pageX + 16) + "px");
+                                .style("left", (d3.event.pageX + 16) + "px")
                                     .html(d.properties.KOMNAVN + ': ' + d.properties.KOMNR.toFixed(2) + '%');
                             } else {
                                 tooltip.classed('hidden', false)
                                 .style("top", (d3.event.pageY + 16) + "px")
-                                .style("left", (d3.event.pageX + 16) + "px");
+                                .style("left", (d3.event.pageX + 16) + "px")
                                     .html(d.properties.KOMNAVN + ': Ukendt');
                             }
                             d3.select(this)
