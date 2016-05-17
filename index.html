@@ -70,6 +70,7 @@
         </select>
 
         <div id="map_popularbooks"></div>
+        
         <div id="map_knn"></div>
 
         <script type="text/javascript">
@@ -96,7 +97,6 @@
 
                 d3.csv(filename, function(data) {
 
-                    var tooltip = d3.select('map_popularbooks').append('div').attr('class', 'hidden tooltip');
                     
                     //Set input domain for color scale
 
@@ -209,6 +209,7 @@
                                 }
                             }
                         }
+                        var tooltip = d3.select('#map_popularbooks').append('div').attr('class', 'hidden tooltip');
                         //Bind data and create one path per GeoJSON feature
                         d3.selectAll(".province").remove();
                         var provinces = svg.selectAll('.province').data(json.features).enter();
