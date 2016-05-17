@@ -229,6 +229,7 @@
                             })
 
                         .on('mousemove', function(d) {
+                            .d3.select("svg")
                                 var mouse = d3.mouse(svg.node()).map(function(d) {
                                     return parseInt(d);
                                 });
