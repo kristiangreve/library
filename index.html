@@ -96,7 +96,8 @@
 
                 d3.csv(filename, function(data) {
 
-                    var tooltip = d3.select('svg').append('div').attr('class', 'hidden tooltip');
+                    var tooltip = d3.select('map_popularbooks').append('div').attr('class', 'hidden tooltip');
+                    
                     //Set input domain for color scale
 
                     color.domain([
