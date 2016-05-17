@@ -87,7 +87,7 @@
                 scale = 800;
             var projection = d3.geo.mercator().scale(7000).center([11.9, 56.7]);
             var path = d3.geo.path().projection(projection)
-            var svg = d3.select("#map_popularbooks").append("svg").attr("width", width).attr("height", height);
+            var svg = d3.select("body").append("svg").attr("width", width).attr("height", height);
 
             updateData("kommuneratio/Filosofi.csv");
 
@@ -209,7 +209,8 @@
                                 }
                             }
                         }
-                        var tooltip = d3.select('#map_popularbooks').append('div').attr('class', 'hidden tooltip');
+                        var tooltip = d3.select('body').append('div').attr('class', 'hidden tooltip');
+                        
                         //Bind data and create one path per GeoJSON feature
                         d3.selectAll(".province").remove();
                         var provinces = svg.selectAll('.province').data(json.features).enter();
