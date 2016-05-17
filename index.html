@@ -36,6 +36,7 @@
             text-shadow: #f5f5f5 0 1px 0;
             border-radius: 2px;
             opacity: 0.9;
+            position: absolute;
             
         }
         
@@ -241,13 +242,16 @@
                             });
                             if (d.properties.KOMNR) {
                                 tooltip.classed('hidden', false)
-                                    .attr('style', 'left:' + (mouse[0] + 15) +
-                                        'px; top:' + (mouse[1] - 35) + 'px')
+                                
+                                
+                                
+                                .style("top", (d3.event.pageY + 16) + "px")
+                                .style("left", (d3.event.pageX + 16) + "px");
                                     .html(d.properties.KOMNAVN + ': ' + d.properties.KOMNR.toFixed(2) + '%');
                             } else {
                                 tooltip.classed('hidden', false)
-                                    .attr('style', 'left:' + (mouse[0] + 15) +
-                                        'px; top:' + (mouse[1] - 35) + 'px')
+                                .style("top", (d3.event.pageY + 16) + "px")
+                                .style("left", (d3.event.pageX + 16) + "px");
                                     .html(d.properties.KOMNAVN + ': Ukendt');
                             }
                             d3.select(this)
